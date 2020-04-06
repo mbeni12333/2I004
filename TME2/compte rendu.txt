@@ -1,0 +1,25 @@
+probleme:
+	-addition soustraction nombre entier avec detection de depassement de capacite.
+solution:
+	Q1 : FND : Somme = non(a).non(b).Cin + non(a).b.non(Cin) + a.b.Cin + a.non(b).non(Cin)
+			  Cout = non(a).b.Cin + a.non(b).Cin + a.b.non(Cin) + a.b.Cin
+	Q2 : Somme : a XOR b XOR Cin
+		reste : a.b + Cin.(a XOR b)
+	Q4: 0001 + 0001 : Somme = 0010 et Cout = 0
+		1000+ 1000 : Somme  = 0000 et Cout = 1
+	Q5 : le chein le plus long est CIN , il traverse n portes
+
+	E2:
+		Q1:
+		0100 0110 - 0000 0100 = 0100 0010 
+		0100 0110 - 0010 1100 = 0001 1010
+		0100 0110 - 0110 1100 = 1001 1010 + retenue = 1
+
+		Q2:	 
+
+			FND : Sous = non(a).non(b).c + non(a).b.non(c) + a.non(b).non(c) + a.b.c
+			  Cout = non(a).non(b).c + non(a).b.non(c) + a.non(b).non(c)+ a.b.c
+			  Sous = a xor b xor c
+			  Cout = non(a).b + c.(non(a XOR b))
+conclusion:
+	- on peut tout faire avec des porte AND et OR.	

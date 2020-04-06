@@ -1,0 +1,177 @@
+########################################################################################"
+#										       #
+#	Benimam Mohamed Mounib , Numero 3801613					       #
+#										       #
+########################################################################################
+
+
+========================================================================================
+EXERCICE 1 :
+
+
+Q1/
+
+Une liste complète des instructions et Syscalls supportés par MARS peut-être trouvée dans Help > Help, ou en utilisant F1.
+
+
+Q2/
+
+On doit faire "Assemble" pour obtenir le moindre changement. On lit dans MARS Messages "Assemble: operation completed successfully."
+
+On peut trouver le codage hexadécimal des instructions dans la partie "Text Segment", les instructions étant implantées à partir de 0x00400000 dans la mémoire.
+Le codage de notre instruction est 0x224c0021.
+
+
+Q3/
+
+0x224c0021 => 0b00100010010011000000000000100001
+Inverser le 29ème bit donne 0b00000010010011000000000000100001 (0x024c0021)
+
+Ce qui corresponds à l'instruction "addu $0, $18, $12".
+
+on remarque que cela n'affecte pas $0
+
+
+Q/4
+
+Si on retire le $ devant le nom d'un des registres, l'assemblage échoue et une erreur apparait dans MARS Messages.
+
+
+==================================================================================================
+
+==================================================================================================
+
+EXERCICE 2:
+
+
+Q1/
+
+1 s'affiche au lieu de 137.
+
+
+Q2/
+
+Au format I, une valeur immédiate est codée sur 16 bits.
+on obtient une erreur pendant l'assemblage car 65537 n'est pas representable en 16 bits
+
+==================================================================================================
+
+EXERCICE 3:
+
+
+Q2/
+
+
+$9 : 0x00000054
+
+$10 : 0x0000000a
+
+lo : 0x00000008
+hi : 0x00000004
+
+$11 : 0x00000008
+
+$12 : 0x00000004
+
+$2 : 0x0000000a (Syscall)
+
+
+Q3/
+
+
+$9 : 0x00000054
+
+$10 : 0x0000000a
+
+lo : 0x00000008
+hi : 0x00000004
+
+$11 : 0x00000008
+
+$12 : 0x00000004
+
+lo : 0x00000050
+hi : 0x00000000
+
+$13 : 0x00000050
+
+$13 : 0x00000054
+
+$2 : 0x00000001 (Syscall affichage)
+
+$4 : 0x00000054 (entier à afficher)
+
+$2 : 0x0000000a (Syscall fin de programme)
+
+
+================================================================================================
+EXERCICE 4:
+
+Dans les commentaires on peut voir les valeurs prédites.
+
+#operations
+ori $3, $0, 0x00FF	# $3 = 0x000000FF
+ori $4, $0, 0xFFF0	# $4 = 0x0000FFF0
+and $5, $4, $3		# $5 = 0x000000F0
+xor $6, $4, $3		# $6 = 0x0000FF0F
+xor $6, $6, $6		# $6 = 0x00000000
+
+# decalages
+ori $4, $0, 25		# $4 = 0x00000019
+
+sll $5, $4, 1		# $5 = 0x00000032
+sll $6, $4, 2		# $6 = 0x00000064
+sll $7, $4, 3 		# $7 = 0x000000C8
+
+srl $5, $4, 1		# $5 = 0x0000000C 
+srl $5, $4, 2		# $5 = 0x00000006
+srl $5, $4, 3		# $5 = 0x00000003
+
+addi $4, $0, -25	# $4 = 0xFFFFFFE7
+srl $5, $4, 1		# $5 = 0x7FFFFFF3
+srl $6, $4, 2		# $6 = 0x1FFFFFF9
+
+sra $15, $4, 1		# $15 = 0xFFFFFFF3
+sra $16, $4, 2		# $16 = 0xFFFFFFF9
+sra $17, $4, 3 		# $17 = 0xFFFFFFFC
+
+#comparaisons
+ori $4, $0, 2		# $4 = 0x00000002
+ori $3, $0, 4		# $3 = 0x00000004
+slt $6, $3, $4		# $6 = 0x00000000
+slt $7, $4, $3		# $7 = 0x00000001
+
+l'assemblage ce fait sans erreurs
+
+
+on remarque que l'operation de decalge est equivalente a multiplier par 2 ou diviser par 2 (decalage a droite et decalage a gauche respectivement)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+######################################################################
+#	Benimam Mohamed Mounib	, 				     #
+######################################################################
+
+======================================================================
+Exercice 1:
+----------
+Q2/
+Adresse de o1: 0x10010000
+Adresse de o2: 0x10010001
+Adresse de o3: 0x10010002
+Adresse de o4: 0x10010003
+Adresse de m1: 0c10010004
+
+Q3/
+On voit la liste des variables déclarées.
+======================================================================
+Exercice 2:
+-----------
+
+Q3/
+affichage:
+	$7 = -1
+	$8 = 255
+explication: sur 1 octet, 0xFF vaut -1 signé et 255 non signé
+             sur 4 octets 0xFF signé vaut 0xFFFFFFFF donc -1, et non signé 0x000000FF donc 255
+
+
+======================================================================
+Exercice 4:
+-----------
+
+
+"0x31 0x32 0x33 0x34 0x35 0x36 0x00"
+
+char '3' == 0x33 (ascii) == 51 (décimal/valeur affichée)
+
+Q5/ Chaque chiffre est précédé d'un 3 en ascii. On soustrait donc 0x30 pour obtenir le chiffre.

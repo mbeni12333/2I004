@@ -1,0 +1,9 @@
+Probleme:
+	construction de circuit basique (xor, multiplexeur 4vers1 , 1 vers 4)
+
+solution:
+	pouor ce faire , on realise les table de verite, ensuite on essaie de simplifier la formule algerique le 	plus possible, et finalememnt on assemble les porte logique necessaire.
+conclusion:
+	- le mux a n bit de selection et 2^n bit d'entre, peut simuler n'importe quel fonction logquique a n entre
+		en forcant ses 2^n entree  a etre 0 ou 1 .
+	- il est plus facile de creer des petit circuit et les assembler que de faire un grand circuit de zero.
